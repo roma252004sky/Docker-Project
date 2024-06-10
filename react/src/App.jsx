@@ -30,15 +30,11 @@ function App() {
                 )}
                 <Container>
                     <Routes>
-                        {!isLoggedIn && <Route path="/" element={<LoginForm />} />}
-                        {isLoggedIn && (
-                            <>
+                    
                                 <Route path="/sellers" element={<Sellers />} />
                                 <Route path="/products" element={<Products />} />
                                 <Route path="/orders" element={<Orders />} />
                                 <Route path="/reports" element={<Reports />} />
-                            </>
-                        )}
                     </Routes>
                 </Container>
             </div>
