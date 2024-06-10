@@ -17,7 +17,7 @@ public class MongoService extends AbstractMongoClientConfiguration {
                 .build();
         MongoClient mongoClient = MongoClients.create(mongoClientSettings);
         System.out.println(connectionString);
-        return new MongoTemplate(mongoClient, "MarketDB");
+        return new MongoTemplate(mongoClient, "appDataBase");
     }
 
     @Override
