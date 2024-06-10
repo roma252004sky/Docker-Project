@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MongoService extends AbstractMongoClientConfiguration {
-    public MongoTemplate mongoTemplate(String name, String password) {
+    public MongoTemplate mongoTemplate() {
         String connectionString = "mongodb://@localhost:27017/appDataBase";
         MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
                 .applyConnectionString(new ConnectionString(connectionString))
