@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class MongoService extends AbstractMongoClientConfiguration {
     public MongoTemplate mongoTemplate(String name, String password) {
-        String connectionString = "mongodb://@localhost:27017/MarketDB";
+        String connectionString = "mongodb://@localhost:27017/appDataBase";
         MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
                 .applyConnectionString(new ConnectionString(connectionString))
                 .build();
