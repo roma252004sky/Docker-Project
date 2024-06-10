@@ -23,10 +23,11 @@ import static org.springframework.data.mongodb.core.aggregation.Aggregation.newA
 
 @RestController
 public class Controller {
-    public static MongoTemplate mongoTemplate;
+
+    
     @Autowired
     MongoService mongoService;
-    mongoTemplate = mongoService.mongoTemplate();
+    public MongoTemplate mongoTemplate = mongoService.mongoTemplate();
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestParam String name, @RequestParam String password) {
         mongoTemplate = mongoService.mongoTemplate(name, password);
