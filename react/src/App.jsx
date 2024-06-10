@@ -14,7 +14,6 @@ function App() {
     return (
         <Router>
             <div>
-                {isLoggedIn && (
                     <Navbar bg="dark" variant="dark">
                         <Container>
                             <Navbar.Brand>MongoApp</Navbar.Brand>
@@ -27,7 +26,6 @@ function App() {
                             <Button variant="outline-light" onClick={handleLogout}>Logout</Button>
                         </Container>
                     </Navbar>
-                )}
                 <Container>
                     <Routes>
                     
