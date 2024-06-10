@@ -28,12 +28,7 @@ public class Controller {
     @Autowired
     MongoService mongoService;
     public MongoTemplate mongoTemplate = mongoService.mongoTemplate();
-    @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestParam String name, @RequestParam String password) {
-        mongoTemplate = mongoService.mongoTemplate(name, password);
-        System.out.println(mongoTemplate.getCollectionNames());
-        return ResponseEntity.ok("Аунтефикация прошла успешно");
-    }
+
     @PostMapping("/api/orders")
     public Order createOrder(@RequestBody Order order) {
         return mongoTemplate.save(order);
